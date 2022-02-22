@@ -1,0 +1,6 @@
+[[module]]
+route = "/"
+module = "ruby.wasm"
+
+# add the usr directory to use default gems
+volumes = { "/" = "lib", "/usr" = "ruby-wasm32-wasi/usr" }
