@@ -11,11 +11,21 @@ Run `make serve` to start wagi.
 Pass the script name as the first argument
 
 ```
-$ curl 'http://localhost:3000?env.rb'
+$ curl 'http://localhost:3000?lib/env.rb'
 ```
 
 The 'ruby-wasm32-wasi/usr' is mounted to '/usr' to allow use of default gems.
 (base64, pp, etc...)
+
+### Running the demo on spin
+
+Run `make serve-spin`
+
+Spin mounts files to the path in the repo. Add 'lib' to the script name.
+
+```
+$ curl 'http://localhost:3000?lib/env.rb'
+```
 
 ## Building Ruby for wasi at home
 

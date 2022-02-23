@@ -1,0 +1,14 @@
+name = "spin-ruby"
+version = "1.0.0"
+description = "A demo of ruby on spin"
+authors = [ "Adam Reese <adam.reese@fermyon.com>" ]
+trigger = { type = "http", base = "/" }
+apiVersion = "0.1.0"
+
+[[component]]
+source = "ruby.wasm"
+id = "ruby"
+files = ["lib/env.rb"]
+[component.trigger]
+route = "/..."
+executor = "wagi"
