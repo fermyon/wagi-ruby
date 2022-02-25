@@ -12,3 +12,7 @@ serve-spin:
 .PHONY: run-wasmtime
 run-wasmtime:
 	wasmtime ruby.wasm --mapdir /::./ -- lib/env.rb
+
+.PHONY: tail-logs
+tail-logs:
+	tail -f ${LOGDIR}/*/*
