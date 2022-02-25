@@ -1,27 +1,30 @@
-puts "Content-Type: text/plain; charset=UTF-8"
-puts "Status: 200"
-puts "X-Foo-Header: Bar"
+# Install awesome_print to local directory
+# GEM_HOME=${PWD}/.gem gem install awesome_print
+require 'awesome_print'
+
+ENV['HOME'] ||= '.'
+
+puts 'Content-Type: text/plain; charset=UTF-8'
+puts 'Status: 200'
+puts 'X-Foo-Header: Bar'
 
 puts
 
-puts "Hello from ruby!"
+puts 'Hello from ruby!'
 puts
 puts "ruby version: #{RUBY_VERSION} (#{RUBY_RELEASE_DATE}) [#{RUBY_PLATFORM}]"
 
 puts
 
-puts "### Arguments ###"
-puts
-ARGV.each_with_index { |e, i| puts "arg #{i}: #{e}" }
+puts '### Arguments ###'
+ap ARGV
 
 puts
 
-puts "### Env Vars ###"
-puts
-ENV.each { |k, v| puts "#{k}=#{v}" }
+puts '### Env Vars ###'
+ap ENV
 
 puts
 
-puts "### Files ###"
-puts
-Dir.foreach("/") { |x| puts x }
+puts '### Files ###'
+ap Dir.children('.')
