@@ -19,12 +19,8 @@ The 'ruby-wasm32-wasi/usr' is mounted to '/usr' to allow use of default gems.
 
 Run `make serve-spin`
 
-Spin mounts files to the path in the repo. Add 'lib' to the script name.
-
-NOTE: Requiring standard library doesn't work with spin yet.
-
 ```
-$ curl 'http://localhost:3000?lib/env.rb'
+$ curl 'http://localhost:3000'
 ```
 
 ## Building Ruby for wasi at home

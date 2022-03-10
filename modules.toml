@@ -6,4 +6,4 @@ module = "ruby.wasm"
 volumes = { "/" = "lib", "/usr" = "ruby-wasm32-wasi/usr" }
 
 # if running Wagi > 0.6.2, you can set a custom argv
-argv = "ruby /env.rb ${SCRIPT_NAME} ${ARGS}"
+argv = "${SCRIPT_NAME} -v /env.rb ${SCRIPT_NAME} ${ARGS}"
