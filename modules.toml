@@ -2,8 +2,7 @@
 route = "/"
 module = "ruby.wasm"
 
-# add the usr directory to use default gems
-volumes = { "/" = "lib", "/usr" = "ruby-wasm32-wasi/usr" }
+volumes = { "/" = "lib", "/usr" = "ruby-wasm32-wasi/usr", "/.gem" = ".gem" }
 
 # if running Wagi > 0.6.2, you can set a custom argv
 argv = "${SCRIPT_NAME} -v /env.rb ${SCRIPT_NAME} ${ARGS}"

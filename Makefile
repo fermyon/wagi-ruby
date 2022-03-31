@@ -1,9 +1,9 @@
-LOGDIR   := _scratch/logs
-CACHEDIR := _scratch/cache
+LOGDIR   := ./logs
+CACHEDIR := ./cache
 
 .PHONY: serve
 serve:
-	RUST_LOG=wagi=trace wagi -c modules.toml --log-dir ${LOGDIR} --module-cache ${CACHEDIR} -e "GEM_HOME=/.gem"
+	RUST_LOG=wagi=trace wagi -c modules.toml --log-dir ${LOGDIR} --module-cache ${CACHEDIR} -e "HOME=/" -e "GEM_HOME=/.gem"
 
 .PHONY: serve-spin
 serve-spin:
