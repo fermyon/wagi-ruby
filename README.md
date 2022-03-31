@@ -21,6 +21,11 @@ Run `make serve-spin`
 
 ```
 $ curl 'http://localhost:3000'
+=======
+## Adding gems
+
+```
+$ GEM_HOME=${PWD}/.gem gem install awesome_print
 ```
 
 ## Building Ruby for wasi at home
