@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    awesome_print (1.9.2)
+
+PLATFORMS
+  arm64-darwin-21
+
+DEPENDENCIES
+  awesome_print
+
+BUNDLED WITH
+   2.3.7
