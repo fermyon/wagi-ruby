@@ -21,7 +21,8 @@ Run `make serve-spin`
 
 ```
 $ curl 'http://localhost:3000'
-=======
+```
+
 ## Adding gems
 
 ```
