@@ -7,7 +7,7 @@ serve:
 
 .PHONY: serve-spin
 serve-spin:
-	RUST_LOG=spin=info,wagi=info spin up --file spin.toml
+	RUST_LOG=spin=info,wagi=info spin up --allow-transient-write --file spin.toml
 
 .PHONY: run-wasmtime
 run-wasmtime:
